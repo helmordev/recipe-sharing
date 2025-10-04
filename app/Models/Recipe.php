@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Recipe extends Model
 {
@@ -32,7 +33,7 @@ class Recipe extends Model
     protected $with = ['user', 'tags'];
 
     // Boot method for auto-generating slug
-    protected static function boot(): void
+    protected static function boot()
     {
         parent::boot();
 
